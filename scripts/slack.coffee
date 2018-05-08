@@ -1,5 +1,5 @@
 module.exports = (robot) ->
-  robot.router.post '/message', (req, res) ->
+  robot.router.post '/github', (req, res) ->
       send_message = (room_name, message) ->
          robot.send {room: room_name}, message
          res.end "send #{room_name} #{message}"
