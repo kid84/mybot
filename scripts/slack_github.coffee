@@ -1,2 +1,3 @@
 module.exports = (robot) ->
-  # robot.router.post "/github", (req, response) ->
+  robot.router.post "/github", (req, response) ->
+    res.end req.body

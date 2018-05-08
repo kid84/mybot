@@ -62,7 +62,7 @@ module.exports = (robot) ->
     body += "\n\n #{_getLGTMImgAtRand}?#{timestamp}" if _shouldAddLGTMImg body
     return body
 
-  robot.router.post "/github", (req, res) ->
+  robot.router.post "/github1", (req, res) ->
     signature = req.get 'X-Hub-Signature'
     data      = req.body
     comment   = data.comment
