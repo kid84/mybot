@@ -11,5 +11,6 @@ module.exports = (robot) ->
     if not req.body
        send_message("general", "何かエラー" )
        return
-    res.send req.body
-    robot.send {room:"C03MX4W8Z"}, req.body
+    # res.send req.body
+    robot.send {room:"C03MX4W8Z"}, "なんかコメントあった#{req.body}"
+    res.status(200).send 'success'
