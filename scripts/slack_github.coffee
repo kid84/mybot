@@ -12,5 +12,5 @@ module.exports = (robot) ->
        send_message("general", "何かエラー" )
        return
     # res.send req.body
-    robot.send {room:"C03MX4W8Z"}, "なんかコメントあった#{req.body}"
+    robot.send {room:"C03MX4W8Z"}, "#{req.body.issue.title}で#{req.body.issue.user}さんが「#{req.body.comment.body}」って言ってます"
     res.status(200).send 'success'
